@@ -31,4 +31,8 @@ class SBertEmbeddingModel(BaseEmbeddingModel):
         self.model = SentenceTransformer(model_name)
 
     def create_embedding(self, text):
-        return self.model.encode(text)
+        if isinstance(text, list):
+            # combine list --> single string
+            text = " ".join(str(x) for x in text)
+        embedding = self.model.encode(text)
+        return embedding.tolist()

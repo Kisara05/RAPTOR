@@ -3,7 +3,7 @@
   <img alt="Shows an illustrated sun in light color mode and a moon with stars in dark color mode." src="raptor.jpg">
 </picture>
 
-## RAPTOR: Recursive Abstractive Processing for Tree-Organized Retrieval
+## RAPTOR (Colab Customed without OpenAI - SBERT x BART): Recursive Abstractive Processing for Tree-Organized Retrieval
 
 **RAPTOR** introduces a novel approach to retrieval-augmented language models by constructing a recursive tree structure from documents. This allows for more efficient and context-aware information retrieval across large texts, addressing common limitations in traditional language models.
 
@@ -19,7 +19,7 @@ For detailed methodologies and implementations, refer to the original paper:
 Before using RAPTOR, ensure Python 3.8+ is installed. Clone the RAPTOR repository and install necessary dependencies:
 
 ```bash
-git clone https://github.com/parthsarthi03/raptor.git
+git clone https://github.com/Kisara05/RAPTOR.git
 cd raptor
 pip install -r requirements.txt
 ```
@@ -162,7 +162,7 @@ custom_config = RetrievalAugmentationConfig(
 RA = RetrievalAugmentation(config=custom_config)
 ```
 
-Check out `demo.ipynb` for examples on how to specify your own summarization/QA models, such as Llama/Mistral/Gemma, and Embedding Models such as SBERT, for use with RAPTOR.
+Check out `RAPTOR.ipynb` for examples on how to specify your own summarization/QA models, such as Llama/Mistral/Gemma, and Embedding Models such as SBERT, for use with RAPTOR.
 
 Note: More examples and ways to configure RAPTOR are forthcoming. Advanced usage and additional features will be provided in the documentation and repository updates.
 
