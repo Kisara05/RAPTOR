@@ -3,7 +3,7 @@
   <img alt="Shows an illustrated sun in light color mode and a moon with stars in dark color mode." src="raptor.jpg">
 </picture>
 
-## RAPTOR (Colab Customed without GPT --> SBERT x BART): Recursive Abstractive Processing for Tree-Organized Retrieval
+## RAPTOR (Colab Customed without GPT --> SBERT x BART x Flan-T5): Recursive Abstractive Processing for Tree-Organized Retrieval
 
 **RAPTOR** introduces a novel approach to retrieval-augmented language models by constructing a recursive tree structure from documents. This allows for more efficient and context-aware information retrieval across large texts, addressing common limitations in traditional language models.
 
