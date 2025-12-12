@@ -2,7 +2,7 @@ import logging
 import pickle
 
 from .cluster_tree_builder import ClusterTreeBuilder, ClusterTreeConfig
-from .EmbeddingModels import BaseEmbeddingModel, SBertEmbeddingModel
+from .EmbeddingModels import BaseEmbeddingModel
 from .QAModels import BaseQAModel, GPT3TurboQAModel
 from .SummarizationModels import BaseSummarizationModel
 from .tree_builder import TreeBuilder, TreeBuilderConfig
@@ -20,7 +20,7 @@ class RetrievalAugmentationConfig:
         tree_builder_config=None,
         tree_retriever_config=None,  # Change from default instantiation
         qa_model=None,
-        embedding_model=SBertEmbeddingModel(),
+        embedding_model=None,
         summarization_model=None,
         tree_builder_type="cluster",
         # New parameters for TreeRetrieverConfig and TreeBuilderConfig
@@ -29,8 +29,8 @@ class RetrievalAugmentationConfig:
         tr_threshold=0.5,
         tr_top_k=5,
         tr_selection_mode="top_k",
-        tr_context_embedding_model="SBert",
-        tr_embedding_model="SBert",
+        tr_context_embedding_model=None,
+        tr_embedding_model=None,
         tr_num_layers=None,
         tr_start_layer=None,
         # TreeBuilderConfig arguments
@@ -42,8 +42,8 @@ class RetrievalAugmentationConfig:
         tb_selection_mode="top_k",
         tb_summarization_length=100,
         tb_summarization_model=None,
-        tb_embedding_models={"SBert": SBertEmbeddingModel()},
-        tb_cluster_embedding_model="SBert",
+        tb_embedding_models=None,
+        tb_cluster_embedding_model=None,
     ):
         # Validate tree_builder_type
         if tree_builder_type not in supported_tree_builders:
